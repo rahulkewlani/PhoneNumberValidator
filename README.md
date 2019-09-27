@@ -4,7 +4,7 @@ This project contains Unit test cases for 10 digit PhoneNumberValidation. it cov
 
 ### Prerequisites
 
-Following softwares must be installed before runnning this automation
+Following softwares must be installed before runnning this test
 
 ```
 - Java
