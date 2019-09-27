@@ -92,7 +92,12 @@ public class TestClass {
         assertEquals(Result.INVALID_PHONENUMBER, tester.phoneNumberValidation("+9111=7999999999"));
        
     }
-    
+    @Test
+    public void testphoneNumberValidationPhoneNumberWithOneDigitCountryCodeWithSpaceSeparated() {
+        ValidatePhoneNumber tester = new ValidatePhoneNumber(); 
+        assertEquals(Result.VALID_PHONENUMBER, tester.phoneNumberValidation("+1 9123456789"));
+       
+    }
     @Test
     public void testphoneNumberValidationPhoneNumberWithTwoDigitCountryCodeWithSpaceSeparated() {
         ValidatePhoneNumber tester = new ValidatePhoneNumber(); 
@@ -103,6 +108,12 @@ public class TestClass {
     public void testphoneNumberValidationPhoneNumberWithThreeDigitCountryCodeWithSpaceSeparated() {
         ValidatePhoneNumber tester = new ValidatePhoneNumber(); 
         assertEquals(Result.VALID_PHONENUMBER, tester.phoneNumberValidation("+911 9123456789"));
+       
+    }
+    @Test
+    public void testphoneNumberValidationPhoneNumberWithOneDigitCountryCodeWithHyphenSeparated() {
+        ValidatePhoneNumber tester = new ValidatePhoneNumber(); 
+        assertEquals(Result.VALID_PHONENUMBER, tester.phoneNumberValidation("+1-9123456789"));
        
     }
     @Test
